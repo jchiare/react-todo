@@ -1,0 +1,12 @@
+.add-section{
+    display:flex;
+}
+
+.item-container{
+    margin: 0.7em auto;
+}
+
+.todo-list-ul{
+    list-style: none;
+    padding:1em;
+}
