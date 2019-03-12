@@ -6,4 +6,9 @@
 
 .container .col {
   width: 32%;
+  text-align:center;
+}
+
+.list-name{
+  font-family: 'Raleway', sans-serif;
 }
