@@ -5,6 +5,7 @@ export default class HeaderSection extends PureComponent {
     return (
       <header>
         <p>Insert inspiring story here?</p>
+        <i className="material-icons">info</i>
       </header>
     );
   }

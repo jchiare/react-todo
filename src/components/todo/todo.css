@@ -29,3 +29,7 @@
     list-style: none;
     padding:1em;
 }
+
+.delete-button{
+    float:right;
+}

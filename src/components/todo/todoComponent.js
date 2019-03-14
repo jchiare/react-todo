@@ -21,6 +21,7 @@ class TodoList extends Component {
       userInput: value
     });
   };
+
   addToList = e => {
     e.preventDefault();
     const updated_list = this.state.list.concat(this.state.userInput);
@@ -28,6 +29,12 @@ class TodoList extends Component {
       list: updated_list,
       userInput: ""
     });
+  };
+
+  deleteItem = index => {
+    const new_list = this.state.list;
+    this.state.list.splice(index, 1);
+    this.setState({ list: new_list });
   };
 
   render() {
@@ -38,7 +45,15 @@ class TodoList extends Component {
             {this.state.list.length > 0 ? (
               this.state.list.map((item, index) => (
                 <li key={index} className="item-container">
-                  <Card className="item-text">{item}</Card>
+                  <Card className="item-text" data-test="hello">
+                    {item}
+                    <button
+                      className="delete-button"
+                      onClick={e => this.deleteItem(index, e)}
+                    >
+                      Delete
+                    </button>
+                  </Card>
                 </li>
               ))
             ) : (
