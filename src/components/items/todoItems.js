@@ -9,7 +9,7 @@ const buttonStyles = {
   margin: "1em"
 };
 
-class TodoList extends Component {
+export default class TodoItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,5 +88,3 @@ class TodoList extends Component {
     );
   }
 }
-
-export default TodoList;
