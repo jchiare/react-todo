@@ -23,6 +23,7 @@
 .item-text{
     padding:0.8em;
     font-family: 'Lato', sans-serif;
+    overflow-wrap: break-word;
 }
 
 .todo-list-ul{
@@ -32,4 +33,11 @@
 
 .delete-button{
     float:right;
+    background-color:red;
+    color:white;
+    border-radius:0.2em;
+    border:0;
+}
+.delete-button:hover{
+    cursor: pointer;
 }

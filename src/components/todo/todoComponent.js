@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Card from "@material-ui/core/Card";
+
 import "./todo.css";
 
 const buttonStyles = {
@@ -32,9 +33,8 @@ class TodoList extends Component {
   };
 
   deleteItem = index => {
-    const new_list = this.state.list;
     this.state.list.splice(index, 1);
-    this.setState({ list: new_list });
+    this.setState({ list: this.state.list });
   };
 
   render() {
@@ -47,11 +47,12 @@ class TodoList extends Component {
                 <li key={index} className="item-container">
                   <Card className="item-text" data-test="hello">
                     {item}
+
                     <button
                       className="delete-button"
-                      onClick={e => this.deleteItem(index, e)}
+                      onClick={() => this.deleteItem(index)}
                     >
-                      Delete
+                      <i className="material-icons">delete</i>
                     </button>
                   </Card>
                 </li>

@@ -6,6 +6,23 @@
 
 .container .col {
   width: 32%;
-  text-align:center;
 }
 
+
+.header-name{
+  display: inherit;
+  justify-content: center;
+}
+
+.header-name > h2{
+  text-align:center
+}
+
+.header-name > h2 > span{
+  position: absolute;
+  padding-left: 8px; 
+}
+
+.info-icon{
+  cursor:help;
+}
