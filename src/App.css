@@ -7,3 +7,13 @@
 .container .col {
   width: 32%;
 }
+
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .col { 
+    width: 85%;
+    margin:2em;
+  }
+}
